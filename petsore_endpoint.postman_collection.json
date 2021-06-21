@@ -6,6 +6,475 @@
 	},
 	"item": [
 		{
+			"name": "post_test_min_int",
+			"item": [
+				{
+					"name": "Add a New Pet min int64",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 Bad input\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{min_int64_val}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a New Pet max int64",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{max_int64_val}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a New Pet less then min int64",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400 Bad input\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{less_then_min_int64}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a New Pet more then max int64",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400 Bad input\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{more_then_max_int64}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a New Pet null val",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400 Bad input\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{null_val}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a New Pet string val",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500 Bad input\", function () {",
+									"    pm.response.to.have.status(500);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{string_val}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD_by_id",
+			"item": [
+				{
+					"name": "Add a New Pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 (Add a New Pet)\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Set Variable (Add a New Pet)\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    console.log(jsonData)",
+									"    pm.environment.set(\"petID\", jsonData.id);",
+									"    pm.environment.set(\"status\", jsonData.status);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{petID}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pet by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verification of status code\", function () {",
+									"    if (pm.environment.get(\"petID\")) {",
+									"        pm.response.to.have.status(200);",
+									"        pm.test(\"Check Added Pet Data\", function () {",
+									"            var jsonData = pm.response.json();",
+									"            pm.expect(jsonData.id).to.eql(123321);",
+									"            pm.expect(jsonData.status).to.eql(\"available\");",
+									"        });",
+									"    } else {",
+									"        pm.response.to.have.status(404);",
+									"        postman.setNextRequest(null);",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/:petId",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								":petId"
+							],
+							"variable": [
+								{
+									"key": "petId",
+									"value": "{{petID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Existing Pet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Seccessfully Updated Pet Data\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.name).to.eql(\"doggie\");",
+									"    pm.expect(jsonData.status).to.eql(\"available\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": {{petID}},\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string121212121212\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Pet From Database",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.environment.set(\"petID\", null);",
+									"});",
+									"",
+									"postman.setNextRequest(\"Get Pet by ID\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet/:petId",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet",
+								":petId"
+							],
+							"variable": [
+								{
+									"key": "petId",
+									"value": "{{petID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Add a New Pet",
 			"event": [
 				{
@@ -99,7 +568,7 @@
 					"variable": [
 						{
 							"key": "petId",
-							"value": "{{petID}}"
+							"value": "123321"
 						}
 					]
 				}
