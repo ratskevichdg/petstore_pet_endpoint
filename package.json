@@ -1,0 +1,23 @@
+{
+    "name": "petstore_crud_testing",
+    "version": "1.0.0",
+    "description": "petstore AOI testing",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "api-tests": "newman run tests/petsore.postman_collection.json -e petstore_env.postman_environment.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ratskevichdg/petstore_pet_endpoint.git"
+    },
+    "author": "Dzmitry Ratskevich",
+    "bugs": {
+        "url": "https://github.com/ratskevichdg/petstore_pet_endpoint/issues"
+    },
+    "homepage": "https://github.com/ratskevichdg/petstore_pet_endpoint#readme",
+    "dependencies": {
+        "newman": "^5.2.3"
+    }
+}
